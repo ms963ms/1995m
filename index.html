@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>مركز العمالقة</title>
+    <script src="./bundle.js"></script>
+    <style>
+      body {
+        background:url('icon0.png');
+		background-repeat: no-repeat;
+		background- fixed;
+        background-color: #252526;
+        color: #cccccc;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        text-align: center;
+	   
+  
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      #console {
+        font-family: monospace;
+        background-color: #1e1e1e;
+        color: #ccccc;
+        border: 1px solid #3c3c3c;
+        padding: 12px;
+        border-radius: 6px;
+        margin-top: 20px;
+        text-align: left;
+      }
+      #jailbreakBtn {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        background: #007acc;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #jailbreakBtn:disabled {
+        background: #555555;
+        color: #aaaaaa;
+        cursor: not-allowed;
+      }
+      #jailbreakBtn:not(:disabled):hover {
+        background: #005a9e;
+      }
+      footer {
+        margin-top: 30px;
+        font-size: 33px;
+        color:#FFFFFF;
+      }
+    </style>
+    <script>
+      if ((window.applicationCache.status == '0') || (window.applicationCache.status == '3')) { // 0: UNCACHED, 3: IDLE
+        window.location.replace("cache.html");
+      }
+    </script>
+  </head>
+  <body>
+	    <h2>***مركز العمالقة للحواسيب***</h2>
+		
+			    <h2>الهوست الخاص بي مركز العمالقة لتعديل البلاستيشن 4 </h2>
+
+		
+
+		
+
+    <div>
+      <button id="jailbreakBtn">تشغيل التعديل</button>
+    </div>
+    <div>
+		    <h2>هذا التعديل  فعال من إصدار 7.0 ألى9.60</h2>
+
+    </div>
+    <pre id="console"></pre>
+    <footer>
+    
+	    أمسح الباركود الظاهر في زاوية الشاشة لمشاهدة صفحتنا على الفيس بوك ومشاهدة قائمة الالعاب لدينا لاتنسى أن تضع أعجاب لنا 
+
+		مركز العمالقة للحواسيب دمشق كفرسوسة شارع الجمالة للتواصل 0938865144محمد\\\0994555846أحمد
+    </footer>
+  </body>
+  <script>
+    // Logging utility
+    const outputConsole = document.getElementById("console");
+    window.log = (msg, color="#cccccc") => { outputConsole.innerHTML += `<span style="color:${color}">${msg}</span><br>`; };
+    // Event definitions
+    addEventListener('unhandledrejection', event => {
+      const reason = event.reason;
+      alert(
+        'Unhandled rejection\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+    });
+    addEventListener('error', event => {
+      const reason = event.error;
+      alert(
+        'Unhandled error\n'
+        + `${reason}\n`
+        + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+        + `${reason.stack}`
+      );
+      return true; // Used for not to show error message on console
+    });
+    // Button click
+    document.getElementById("jailbreakBtn").addEventListener("click", () => {
+      // Disable to prevent double click
+      document.getElementById("jailbreakBtn").disabled = true;
+      outputConsole.textContent = ""; // Clear console log
+      try {
+        doJBwithPSFreeLapseExploit();
+      } catch (error) {
+        window.log("An error occured during exploit: " + error, "red");
+      }
+    });
+  </script>
+
+<!-- Mirrored from ps4idea.github.io/960N/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jan 2026 18:39:55 GMT -->
+</html>
+
